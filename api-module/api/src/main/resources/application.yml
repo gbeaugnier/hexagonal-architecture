@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: hexagonal architecture example
+
+  jpa:
+    open-in-view: off
+    hibernate:
+      ddl-auto: create
+    show-sql: on
+    properties:
+      hibernate:
+        order_inserts: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  datasource:
+    url: jdbc:h2:mem:test_db
+    username: sa
+    password:
